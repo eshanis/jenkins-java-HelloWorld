@@ -20,7 +20,7 @@ node {
             
     }
         app.inside {
-         sh ' java /tmp/HelloWorld'
+         sh ' pwd'
         }
         
         
