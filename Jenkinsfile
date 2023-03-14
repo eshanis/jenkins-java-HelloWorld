@@ -16,7 +16,7 @@ node {
   
         docker.image('eshnil/simplejavaapp:latest').withRun() { c ->
             sh ' echo "tested" '
-            sh ' java /tmp/HelloWorld '
+            sh ' pwd '
             
     }
         
