@@ -18,10 +18,7 @@ node {
             sh ' echo "tested" '
             
     }
-        app.inside{
-        sh 'java HelloWorld'
         
-        }
         
     }
   
