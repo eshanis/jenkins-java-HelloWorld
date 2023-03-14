@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("eshnil/simplejavaapp")
+       docker.build("eshnil/simplejavaapp")
     }
 
     stage('Test image') {
@@ -19,7 +19,7 @@ node {
        
             
     }
-        app.inside() {
+        docker.image('eshnil/simplejavaapp:latest').inside() {
          sh ' pwd'
         }
         
