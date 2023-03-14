@@ -19,9 +19,9 @@ node {
        
             
     }
-        app.inside {
-         sh ' pwd'
-        }
+        //app.inside {
+         //sh ' pwd'
+        //}
         
         
     }
