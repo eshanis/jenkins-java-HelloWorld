@@ -21,6 +21,12 @@ node {
         
         
     }
+    
+    stage('Run Docker container on Remote') {
+            steps {
+                sh 'docker -H tcp://107.21.59.88:4243 run   eshnil/simplejavaapp'
+            }
+        }
   
    
 }
