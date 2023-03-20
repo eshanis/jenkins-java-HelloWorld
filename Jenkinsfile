@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       docker.build("eshnil/simplejavaapp")
+       app=docker.build("eshnil/simplejavaapp")
     }
 
     stage('Test image') {
@@ -20,6 +20,14 @@ node {
     }
         
         
+    }
+    
+     stage('Push image') {
+        
+        docker.withRegistry('https://registry.hub.docker.com', 'eshani-dockerhub-id') {
+            app.push("${env.BUILD_NUMBER}")
+            app.push("latest")
+        }
     }
     
     stage('Run Docker container on Remote') {
